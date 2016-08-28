@@ -25,6 +25,7 @@
     "nativeLanguage": "en",
     "languages": [
       "en"
-    ]
+    ],
+    "enableSocialSignIn": false
   }
 }
