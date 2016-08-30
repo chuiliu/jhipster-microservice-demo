@@ -13,19 +13,24 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api")
-@Api(value = "/api", description = "测试", position = 1)
-//可以自动刷新参数 环境变量刷新
+@Api(value = "/api", description = "test", position = 1)
+// 测试自动刷新配置
 @ConfigurationProperties
 public class testConfigResource {
 
-    @Value("${testData.name:defaultValue}")
+    @Value("${testData.user.id:defaultValue}")
+    private String id;
+
+    @Value("${testData.user.name:defaultValue}")
     private String name;
 
-    @Value("${testData.remark:defaultValue}")
+    @Value("${testData.user.remark:defaultValue}")
     private String remark;
 
-    @Value("${testData.introduction:defaultValue}")
-    private String introduction;
+    @RequestMapping(value = "test_id", method = RequestMethod.GET)
+    public String testIntroduction() {
+        return "id：" + id;
+    }
 
     @RequestMapping(value = "test_name", method = RequestMethod.GET)
     public String testName() {
@@ -37,8 +42,5 @@ public class testConfigResource {
         return "remark：" + remark;
     }
 
-    @RequestMapping(value = "test_introduction", method = RequestMethod.GET)
-    public String testIntroduction() {
-        return "introduction：" + introduction;
-    }
+
 }

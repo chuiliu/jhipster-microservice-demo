@@ -11,9 +11,10 @@
 # ===================================================================
 
 testData:
-    name: users微服务项目下配置文件中的name值
-    remark: users微服务项目下配置文件中的remark值
-    introduction: users微服务项目下配置文件中的introduction值（在本地配置文件中没有配置这个值）
+    user:
+        id: users微服务项目下配置文件中的id值
+        name: users微服务项目下配置文件中的name值
+        remark: users微服务项目下配置文件中的remark值（在本地配置文件中没有配置这个值）
 
 eureka:
     instance:
