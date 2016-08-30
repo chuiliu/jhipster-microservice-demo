@@ -14,7 +14,7 @@ testData:
     user:
         id: users微服务项目下配置文件中的id值
         name: users微服务项目下配置文件中的name值
-        remark: users微服务项目下配置文件中的remark值（在本地配置文件中没有配置这个值）
+        remark: users微服务项目下配置文件中的remark值（在本地文件系统中的配置和git远程仓库中均没有配置这个值）
 
 eureka:
     instance:
